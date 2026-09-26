@@ -1,0 +1,924 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0c0b0a;
+
+    color: #f5f1eb;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   AVISO DEMOSTRATIVO
+========================= */
+
+.demo-bar {
+    background: #171411;
+
+    color: #b8a98f;
+
+    text-align: center;
+
+    padding: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(12, 11, 10, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #29231e;
+}
+
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+    color: #b9976b;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+    color: #cfc7bd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #c49a6c;
+}
+
+
+.menu-button {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #392c20,
+            #0c0b0a 65%
+        );
+}
+
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.7)
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 30px;
+}
+
+
+.hero-label {
+    display: inline-block;
+
+    color: #d0ad7b;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 strong {
+    display: block;
+
+    color: #c89d68;
+}
+
+
+.hero p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #c8c0b7;
+
+    font-size: 19px;
+}
+
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 14px 27px;
+
+    border-radius: 8px;
+
+    background: #c39461;
+
+    color: #100e0c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    transform: translateY(-4px);
+
+    background: #dfb785;
+}
+
+
+.button-outline {
+    background: transparent;
+
+    border: 1px solid #8f7353;
+
+    color: white;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    padding: 110px 8%;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+.menu-section {
+    max-width: none;
+
+    background: #12100e;
+}
+
+
+.section-title {
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.section-title span {
+    color: #b88b5c;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+}
+
+
+.section-title p {
+    color: #999;
+}
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.about {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about-text p {
+    color: #aaa;
+
+    margin-bottom: 18px;
+
+    font-size: 17px;
+}
+
+
+.about-text strong {
+    color: #c9a06d;
+}
+
+
+.about-card {
+    padding: 40px;
+
+    background: #161310;
+
+    border: 1px solid #30271f;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+
+.about-icon {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+
+.about-card p {
+    color: #999;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu-section {
+    padding-left: 8%;
+
+    padding-right: 8%;
+}
+
+
+.menu-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.food-card {
+    overflow: hidden;
+
+    background: #181512;
+
+    border: 1px solid #2d261f;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+
+.food-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #725537;
+}
+
+
+.food-image {
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 75px;
+
+    background: #211b16;
+}
+
+
+.tacos {
+    background: #302217;
+}
+
+
+.burger {
+    background: #251d17;
+}
+
+
+.nachos {
+    background: #322817;
+}
+
+
+.quesadillas {
+    background: #2a2118;
+}
+
+
+.enchiladas {
+    background: #301e17;
+}
+
+
+.dessert {
+    background: #292019;
+}
+
+
+.food-content {
+    padding: 25px;
+}
+
+
+.food-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.food-title h3 {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+}
+
+
+.food-title strong {
+    color: #c89c67;
+
+    white-space: nowrap;
+}
+
+
+.food-content p {
+    color: #92908c;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROMOCIÓN
+========================= */
+
+.promo {
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(
+            100deg,
+            #4a3421,
+            #201811
+        );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.promo span {
+    color: #d7b383;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.promo h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    margin: 8px 0;
+}
+
+
+.promo p {
+    color: #c5b7a7;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.gallery-item {
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #282019,
+            #15110e
+        );
+
+    border: 1px solid #30271f;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.gallery-item:hover {
+    transform: scale(1.03);
+
+    border-color: #80603e;
+}
+
+
+/* =========================
+   HORARIOS
+========================= */
+
+.hours-section {
+    padding: 80px 8%;
+
+    background: #12100e;
+}
+
+
+.hours-card {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 50px;
+
+    background: #181512;
+
+    border: 1px solid #30271f;
+
+    border-radius: 18px;
+}
+
+
+.hours-card span {
+    color: #b88b5c;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.hours-card h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    margin-top: 10px;
+}
+
+
+.hours p {
+    padding: 15px 0;
+
+    border-bottom: 1px solid #2d2722;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.hours strong {
+    color: #ddd;
+}
+
+
+.hours span {
+    color: #9d9389;
+
+    letter-spacing: 0;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.contact-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #15120f;
+
+    border: 1px solid #2b241e;
+
+    border-radius: 16px;
+}
+
+
+.contact-icon {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+.contact-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card p {
+    color: #999;
+}
+
+
+.contact-card a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #c69b68;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 8%;
+
+    text-align: center;
+
+    background: #080706;
+
+    border-top: 1px solid #27211c;
+}
+
+
+.footer-logo {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.footer-logo span {
+    color: #bd9160;
+}
+
+
+footer p {
+    color: #777;
+
+    margin: 10px 0;
+}
+
+
+footer a {
+    color: #c39a6a;
+
+    text-decoration: none;
+}
+
+
+.copyright {
+    margin-top: 25px !important;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu-button {
+        display: block;
+    }
+
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        background: #0c0b0a;
+
+        border-bottom: 1px solid #29231e;
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hours-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .promo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 80px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+        height: 180px;
+    }
+
+
+    .hours-card {
+        padding: 30px 20px;
+    }
+
+
+    .hours p {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+
+    .promo {
+        padding: 60px 20px;
+    }
+
+}
